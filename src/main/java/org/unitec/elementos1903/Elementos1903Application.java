@@ -24,8 +24,11 @@ public class Elementos1903Application implements CommandLineRunner{
      // repoCliente.save(new Cliente(2, "Topoyiyo", "yo@gmil.com"));
      
      //Buscar todos
+        
      
-     for(Cliente c: repoCliente.findAll()){
+      
+     
+     for(Cliente c: repoCliente.findByEmail("rapidclimate@gmail.com")){
          System.out.println(c);
      }
      
