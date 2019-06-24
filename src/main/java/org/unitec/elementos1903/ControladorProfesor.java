@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = {"https://angular-jpyadz.stackblitz.io", "https://daton.github.io" , "http://localhost:4200" }, allowCredentials = "true")
 public class ControladorProfesor {
     //Método para Guardar
 
