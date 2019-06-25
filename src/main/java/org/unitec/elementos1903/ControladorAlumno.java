@@ -60,7 +60,7 @@ public class ControladorAlumno {
 
      Alumno recuperado=   repoAlumno.findByEmailAndCuenta(alumno.getEmail(), alumno.getCuenta());
         if(recuperado!=null)alumno.setAutenticado(true);
-        else alumno.setAutenticado(true);
+        else alumno.setAutenticado(false);
       
 
         return alumno;
