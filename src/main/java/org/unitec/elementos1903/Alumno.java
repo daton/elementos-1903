@@ -18,6 +18,7 @@ public class Alumno {
     private String nombre;
     private List<Materia> materias;
     private String email;
+    private boolean autenticado;
 
     public Alumno(String cuenta, String nombre, List<Materia> materias, String email) {
         this.cuenta = cuenta;
@@ -60,6 +61,14 @@ public class Alumno {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public boolean isAutenticado() {
+        return autenticado;
+    }
+
+    public void setAutenticado(boolean autenticado) {
+        this.autenticado = autenticado;
     }
     
 }

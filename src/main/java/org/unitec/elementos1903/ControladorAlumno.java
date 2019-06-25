@@ -47,12 +47,27 @@ public class ControladorAlumno {
         return e;
 
     }
-    //Buscar todos
-    @GetMapping("/alumno")
-    public List<Alumno> buscarTodos(){
-       return repoAlumno.findAll();
+    
+    
+    //Autenticar
+    @PostMapping("/alumno/autenticar")
+    public Alumno autenticar(@RequestBody String json) throws Exception {
+        //Primero  vamos a recibir el json del cliente web Y lo transformamos
+        //a un objeto Java  con la clase ObjectMapper
+        ObjectMapper maper = new ObjectMapper();
+        //Ahora si lo leemos
+        Alumno alumno = maper.readValue(json, Alumno.class);
+
+     Alumno recuperado=   repoAlumno.findByEmailAndCuenta(alumno.getEmail(), alumno.getCuenta());
+        if(recuperado!=null)alumno.setAutenticado(true);
+        else alumno.setAutenticado(true);
+      
+
+        return alumno;
+
     }
     
+   
     //Borrar
     @DeleteMapping("/alumno/{id}")
     public Estatus borrar(@PathVariable String id){

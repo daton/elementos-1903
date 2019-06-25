@@ -12,5 +12,5 @@ import org.springframework.data.mongodb.repository.MongoRepository;
  * @author campitos
  */
 public interface RepoAlumno extends MongoRepository<Alumno, String>{
-    
+    Alumno findByEmailAndCuenta(String email, String cuenta);
 }
