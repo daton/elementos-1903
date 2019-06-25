@@ -96,6 +96,14 @@ public class ControladorAlumno {
 
         return e;
     }
+    
+     //BUscar por ID
+    @GetMapping("/alumno")
+    public List<Alumno> buscarTodos(){
+        
+       return repoAlumno.findAll();
+    }
+    
     //BUscar por ID
     @GetMapping("/alumno/{id}")
     public Alumno buscarPorId(@PathVariable String id){
