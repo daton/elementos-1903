@@ -5,6 +5,7 @@
  */
 package org.unitec.elementos1903;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.List;
 import org.springframework.data.annotation.Id;
 
@@ -12,6 +13,7 @@ import org.springframework.data.annotation.Id;
  *
  * @author campitos
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Alumno {
     @Id
     private String cuenta;
