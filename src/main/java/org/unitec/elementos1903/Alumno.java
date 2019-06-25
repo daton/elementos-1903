@@ -6,18 +6,20 @@
 package org.unitec.elementos1903;
 
 import java.util.List;
+import org.springframework.data.annotation.Id;
 
 /**
  *
  * @author campitos
  */
 public class Alumno {
-    private Integer cuenta;
+    @Id
+    private String cuenta;
     private String nombre;
     private List<Materia> materias;
     private String email;
 
-    public Alumno(Integer cuenta, String nombre, List<Materia> materias, String email) {
+    public Alumno(String cuenta, String nombre, List<Materia> materias, String email) {
         this.cuenta = cuenta;
         this.nombre = nombre;
         this.materias = materias;
@@ -27,11 +29,12 @@ public class Alumno {
     public Alumno() {
     }
 
-    public Integer getCuenta() {
+    
+    public String getCuenta() {
         return cuenta;
     }
 
-    public void setCuenta(Integer cuenta) {
+    public void setCuenta(String cuenta) {
         this.cuenta = cuenta;
     }
 

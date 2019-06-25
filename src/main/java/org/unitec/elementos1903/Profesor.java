@@ -5,11 +5,15 @@
  */
 package org.unitec.elementos1903;
 
+import org.springframework.data.annotation.Id;
+
 /**
  *
  * @author campitos
  */
 public class Profesor {
+    
+    @Id
     private Integer Clave;
 
     public Profesor(Integer Clave, String Nombre, String Email) {
