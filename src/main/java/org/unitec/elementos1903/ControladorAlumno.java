@@ -33,7 +33,7 @@ public class ControladorAlumno {
     @PostMapping("/alumno")
     public Estatus guardar(@RequestBody String json) throws Exception {
         //Primero  vamos a recibir el json del cliente web Y lo transformamos
-        //a un objeto Java  con la clase ObjectMapper
+        //a un objeto Java  con la clase ObjectMapper  asasasasasas
         ObjectMapper maper = new ObjectMapper();
         //Ahora si lo leemos
         Alumno alumno = maper.readValue(json, Alumno.class);
