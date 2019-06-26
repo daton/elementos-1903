@@ -21,7 +21,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin
 public class ControladorProfesor {
     //Método para Guardar
 
